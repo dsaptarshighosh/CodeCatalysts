@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recognition of Creation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">Recognition of Creation</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#creators">Creators</a>
+        <a href="#upload">Upload</a>
+        <a href="#dashboard">Dashboard</a>
+        <button id="connectWallet" class="btn primary">Connect Wallet</button>
+        <button id="themeToggle" class="btn outline">🌙 Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container centered-hero">
+      <h1>Beautiful Frontend — Trial Model Included</h1>
+      <p>Experience a modern decentralized content-sharing demo. Connect your wallet, upload content, and see how tokenized recognition would work in the real app.</p>
+
+      <div id="walletInfo" class="wallet-box hidden">
+        <p><strong>Connected Wallet:</strong> <span id="walletAddress">Not connected</span></p>
+      </div>
+
+      <div class="card preview centered-upload">
+        <h3>Live Preview (Trial Upload)</h3>
+        <input id="fileInput" type="file" />
+        <div id="uploadPreview" class="upload-preview">No file uploaded</div>
+      </div>
+
+      <div class="hero-ctas">
+        <button id="tokenCheck" class="btn outline">Check Token Access</button>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="feature">
+          <h4>Wallet Connection</h4>
+          <p>Simulates a decentralized identity connection.</p>
+        </div>
+        <div class="feature">
+          <h4>Token Access</h4>
+          <p>Checks for access tokens stored locally (mock Web3 logic).</p>
+        </div>
+        <div class="feature">
+          <h4>Creator Dashboard</h4>
+          <p>View your uploaded “content NFTs” — simulated for demo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="upload" class="container upload-section">
+      <h2>Upload Content (Demo)</h2>
+      <form id="uploadForm" class="upload-form">
+        <label for="title">Title</label>
+        <input id="title" name="title" placeholder="Project title" />
+        <label for="desc">Short description</label>
+        <textarea id="desc" name="desc" rows="3" placeholder="Short description..."></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Mint Token (Demo)</button>
+          <button type="button" class="btn outline" id="clearForm">Clear</button>
+        </div>
+      </form>
+      <div id="formResult" class="card result">No content minted yet.</div>
+    </section>
+
+    <section id="dashboard" class="container dashboard">
+      <h2>Your Creator Dashboard</h2>
+      <div id="tokenList" class="card">
+        <p>No tokens yet. Upload something to mint one!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© 2025 Recognition of Creation — A website by Code Catalysts</small>
+  </footer>
+
+  <!-- Modal -->
+  <div id="trialModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <h3>Trial Mode</h3>
+      <p id="trialMessage">This is a trial model — integrate the real application logic in production.</p>
+      <div class="modal-actions">
+        <button id="modalOkay" class="btn primary">Okay</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
